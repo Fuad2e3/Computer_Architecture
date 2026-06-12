@@ -182,10 +182,7 @@ void nonRestoringDivision(const string M, string A, string Q){
 void aboutProject(){
     system("cls");
     cout<<"\n <-- About Project -->\n------------------------------\n";
-    cout<<" <--Presented to-->\n-------------------------------\n";
-    cout<<" Syed Ahsanul Kabir\n Associate Chairperson\n Green University Of Bangladesh\n\n";
     cout<<" About Me\n-------------------------------\n";
-    cout<<" Name: Md. Nazmul Hossain\n ID: 223002089\n-------------------------------\n";
     cout<<" Name: Md. Abdullah Al Fuad\n ID: 223002080\n-------------------------------\n\n";
     system("pause"); system("cls");
 }
