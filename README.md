@@ -12,7 +12,7 @@
 
 ---
 
-[Explore Algorithms](#-features) • [Code Architecture](#-project-structure) • [Compilation](#-getting-started) • [License](#-license)
+[Explore Algorithms](#-features) • [Code Architecture](#-project-structure) • [License](#-license)
 
 </div>
 
@@ -49,30 +49,11 @@ Computer_Architecture/
 
 ---
 
-## 🛠️ Getting Started
-
-### 1. Prerequisites
-- GCC / MinGW or Clang compiler.
-
-### 2. Compilation
-```bash
-g++ -O2 RestorigXnonRestoring.cpp -o DivisionAlgo
-```
-
-### 3. Execution
-```bash
-./DivisionAlgo
-```
-
----
-
 ## 📄 License
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <div align="center">
 
-**Developed with ❤️ by Fuad**  
-*Developed by Softece*  
-*Computer Architecture | Green University of Bangladesh*
+**Developed ❤️ by Softece**
 
 </div>
