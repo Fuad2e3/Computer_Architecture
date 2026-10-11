@@ -1,67 +1,78 @@
-# Computer Architecture: Division Algorithms
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/Computer_Architecture-University_Project-blue?style=for-the-badge" alt="Project Type" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
-</p>
+# 💻 Computer Architecture: Binary Division Algorithms
+### **Hardware ALU Simulation: Restoring & Non-Restoring Division**
+
+[![Language](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
+[![Course](https://img.shields.io/badge/Course-Computer_Architecture-blue?style=for-the-badge)](https://green.edu.bd)
+[![Focus](https://img.shields.io/badge/Focus-ALU_Arithmetic-orange?style=for-the-badge)](RestorigXnonRestoring.cpp)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+
+**Low-level ALU arithmetic simulation tracing binary register states (Accumulator A, Dividend Q, Divisor M).**
+
+---
+
+[Explore Algorithms](#-features) • [Code Architecture](#-project-structure) • [Compilation](#-getting-started) • [License](#-license)
+
+</div>
+
+---
 
 ## 📌 Project Overview
+Developed as part of the Computer Architecture coursework at **Green University of Bangladesh**, this project implements two fundamental hardware-level binary integer division algorithms: **Restoring Division** and **Non-Restoring Division**. It provides a cycle-by-cycle hardware trace of how the Accumulator register ($A$), Dividend register ($Q$), and Divisor register ($M$) mutate during each ALU clock cycle.
 
-This project implements two fundamental computer architecture algorithms for binary division: **Restoring Division** and **Non-Restoring Division**. Developed as part of the Computer Architecture course at **Green University of Bangladesh**, this tool provides a step-by-step trace of the division process, showing how the Accumulator (A), Dividend (Q), and Divisor (M) change during each step.
+---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- **Restoring Division Algorithm:** A detailed implementation that restores the accumulator if a subtraction result is negative.
-- **Non-Restoring Division Algorithm:** An optimized approach that avoids the restoration step by adjusting the operation in the next cycle.
-- **Decimal to Binary Conversion:** Automatically handles conversion and sign extension for division operations.
-- **Interactive Menu:** Easy-to-use CLI for selecting algorithms and inputting decimal values.
-- **Detailed Step-by-Step Trace:** Outputs the state of registers and operations at every iteration.
+- ⚙️ **Restoring Division Algorithm:** Hardware trace that evaluates partial remainders and executes an automatic accumulator restoration step when intermediate subtraction yields a negative result.
+- ⚡ **Non-Restoring Division Algorithm:** Optimized high-speed arithmetic eliminating the restoration penalty cycle by shifting the partial remainder and adding/subtracting conditionally.
+- 🔢 **Binary & 2's Complement Converters:** End-to-end base-10 to signed binary converters handling register bit-width alignment.
+- 🖥️ **Interactive Terminal CLI:** Clean prompt allowing users to enter arbitrary dividend and divisor pairs and inspect step-by-step register states.
+
+---
 
 ## 📁 Project Structure
 
-The project is structured simply to focus on the algorithmic implementation:
-
 ```text
 Computer_Architecture/
-├── RestorigXnonRestoring.cpp  # Main source code containing both algorithms
-├── .gitattributes             # Git configuration
-└── .idea/                     # IDE configuration files
+├── RestorigXnonRestoring.cpp   # Core C++ implementation of division routines
+├── LICENSE                     # MIT License
+└── README.md                   # System documentation & usage guide
 ```
 
-### Key Components in `RestorigXnonRestoring.cpp`:
-- `restoringDivision()`: Implements the restoring division logic.
-- `nonRestoringDivision()`: Implements the non-restoring division logic.
-- `decimalToBinary()` & `binaryToDecimal()`: Utility functions for base conversion.
-- `add()` & `complement()`: Binary arithmetic helpers.
+### Key Modules in `RestorigXnonRestoring.cpp`:
+- `restoringDivision()`: Implements cycle-level restoring logic with register state dumps.
+- `nonRestoringDivision()`: Implements cycle-level non-restoring conditional addition/subtraction.
+- `decimalToBinary()` & `binaryToDecimal()`: Bit-vector conversion utilities.
+- `add()` & `complement()`: Binary ripple-carry addition and two's complement generators.
+
+---
 
 ## 🛠️ Getting Started
 
-### Prerequisites
-- A C++ compiler (GCC/MinGW recommended).
-- A terminal or IDE (VS Code, Code::Blocks, CLion).
+### 1. Prerequisites
+- GCC / MinGW or Clang compiler.
 
-### Installation & Execution
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/fuadk/Computer_Architecture.git
-   cd Computer_Architecture
-   ```
-2. Compile the code:
-   ```bash
-   g++ RestorigXnonRestoring.cpp -o DivisionAlgo
-   ```
-3. Run the executable:
-   ```bash
-   ./DivisionAlgo
-   ```
+### 2. Compilation
+```bash
+g++ -O2 RestorigXnonRestoring.cpp -o DivisionAlgo
+```
 
+### 3. Execution
+```bash
+./DivisionAlgo
+```
+
+---
 
 ## 📄 License
-
 Distributed under the MIT License. See `LICENSE` for more information.
 
-<p align="center">
-  Developed with ❤️ by <b>Fuad</b><br>
-  <i>Computer Architecture | Green University of Bangladesh</i>
-</p>
+<div align="center">
+
+**Developed with ❤️ by Fuad**  
+*Developed by Softece*  
+*Computer Architecture | Green University of Bangladesh*
+
+</div>
